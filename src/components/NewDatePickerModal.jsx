@@ -41,9 +41,9 @@ const NewDatePickerModal = ({ dateValue, setDateValue }) => {
     setVisibleMonth((currentMonth) => addMonths(currentMonth, 1))
   }
   return (
-    <div className="pt-16">
-      <div className="max-w-md px-4 mx-auto sm:px-7 md:max-w-4xl md:px-6">
-        <div className="md:grid md:grid-cols-2 md:divide-x md:divide-gray-500">
+    <div>
+      <div className="w-[500px] px-4 mx-auto sm:px-7 md:max-w-4xl md:px-6">
+        <div className="md:grid md:grid-cols-1 md:divide-x md:divide-gray-500">
           <div className="md:pr-14">
             <div className="flex items-center">
               <h2 className="flex-auto font-semibold text-gray-900">
@@ -85,10 +85,11 @@ const NewDatePickerModal = ({ dateValue, setDateValue }) => {
                   <button
                     type="button"
                     onClick={() => setDateValue(date)}
-                    className={`hover:bg-black hover:text-white cursor-pointer rounded-[50%] p-1 border-0 bg-white  ${
-                      !isSameMonth(date, visibleMonth) &&
-                      "date-picker-other-month-date text-[#aaa]"
-                    } ${isSameDay(date, dateValue) && ` text-white bg-black`}
+                    className={`hover:bg-black  hover:text-white focus:bg-black
+                   cursor-pointer rounded-[50%] p-1 border-0  ${
+                     !isSameMonth(date, visibleMonth) &&
+                     "date-picker-other-month-date text-[#aaa]"
+                   } ${isSameDay(date, dateValue) && ` text-white bg-black`}
                     ${
                       isToday(date) && "border-[1px] border-solid border-black"
                     } flex justify-center items-center w-full h-full`}

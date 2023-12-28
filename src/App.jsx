@@ -4,7 +4,7 @@ import DatePicker from "./components/DatePicker"
 
 const App = () => {
   return (
-    <div>
+    <div className="min-w-[90vw] min-h-[90vh] flex justify-center items-center ">
       <DatePicker />
     </div>
   )

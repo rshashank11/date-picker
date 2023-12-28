@@ -26,8 +26,7 @@ const DatePickerModal = ({ dateValue, setDateValue }) => {
     setVisibleMonth((currentMonth) => addMonths(currentMonth, 1))
   }
   return (
-    <div className="date-picker absolute mt-4 top-full translate-x-[-50%] left-1/2 p-2 rounded-lg bg-white shadow-lg">
-      <div>Hello</div>
+    <div className="date-picker absolute mt-4 top-full  left-1/2 p-2 rounded-lg bg-white shadow-lg">
       <div className="date-picker-header flex justify-between font-bold text-xs items-center">
         <div className="current-month">{format(visibleMonth, "MMMM yyyy")}</div>
         <button
